@@ -13,7 +13,7 @@ class Region(object):
         :param id:
         """
         self.id = id
-        self.region = None
+        self.roi = None  # Region of interest
         self.bounding_region = None
         self.pixels = None
 
@@ -64,27 +64,35 @@ class Region(object):
                 y = vertex.y
         return x, y
 
-    def get_region_location(self):
-        return self._get_location(self.region)
+    def get_roi_location(self):
+        """
+        Returns the location of region of interest (ROI).
+        :return:
+        """
+        return self._get_location(self.roi)
 
     def get_bounding_region_location(self):
         return self._get_location(self.bounding_region)
 
-    def get_region_size(self):
-        return self._get_width_and_height(self.region)
+    def get_roi_size(self):
+        """
+        Returns the size of region of interest (ROI).
+        :return:
+        """
+        return self._get_width_and_height(self.roi)
 
     def get_bounding_region_size(self):
         return self._get_width_and_height(self.bounding_region)
 
-    def set_region(self, vertices):
+    def set_roi(self, vertices):
         """
-        Sets the region for image registration.
+        Sets the region of interest (ROI) for image registration.
         :param vertices:
         :type vertices: a list of model.Vertex
 
         :return:
         """
-        self.region = vertices
+        self.roi = vertices
 
     def set_bounding_region(self, vertices):
         """
