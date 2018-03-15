@@ -30,10 +30,39 @@ This repository depends on [OpenCV](https://opencv.org) and [OpenSlide](http://o
         mkdir ~/opencv
         cd ~/opencv
 
-7. Download `opencv` (from [this link](https://opencv.org/releases.html)) and unzip it to the above-created folder. 
-8. Download `opencv` extras (from [this link](https://github.com/opencv/opencv_contrib/releases)) and unzip it to the above-created folder. 
-9. `cd` to the `opencv` folder, and make a build folder and `cd` to it. 
-10. Run the following `make` command: 
+7. Download `opencv-3.X.X` Sources (from [this link](https://opencv.org/releases.html)) and unzip it to the above-created folder.
+8. Download `opencv` extras (from [this link](https://github.com/opencv/opencv_contrib/releases)) and unzip it to the above-created folder.
+9. `cd` to the unzipped `opencv-3.X.X` folder, and make a build folder.
+
+Your folder structure should now look like this:
+
+.
+└── opencv
+    ├── opencv-3.4.1
+    │   ├── 3rdparty
+    │   ├── CMakeLists.txt
+    │   ├── CONTRIBUTING.md
+    │   ├── LICENSE
+    │   ├── README.md
+    │   ├── apps
+    │   ├── build
+    │   ├── cmake
+    │   ├── data
+    │   ├── doc
+    │   ├── include
+    │   ├── modules
+    │   ├── platforms
+    │   └── samples
+    └── opencv_contrib-3.4.1
+        ├── CONTRIBUTING.md
+        ├── LICENSE
+        ├── README.md
+        ├── doc
+        ├── modules
+        └── samples
+
+
+10. cd into your opencv-3.X.X/build folder and run the following `make` command:
 
 ```shell
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
