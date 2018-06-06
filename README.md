@@ -36,6 +36,7 @@ This repository depends on [OpenCV](https://opencv.org) and [OpenSlide](http://o
 
 Your folder structure should now look like this:
 
+```shell
 .
 └── opencv
     ├── opencv-3.4.1
@@ -61,6 +62,7 @@ Your folder structure should now look like this:
         ├── modules
         └── samples
 
+```
 
 10. cd into your opencv-3.X.X/build folder and run the following `make` command:
 
